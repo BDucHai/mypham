@@ -4,11 +4,11 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/assets/css/thanhtoan.css" />
+        <link rel="stylesheet" href="/assets/css/dangnhap.css" />
         <!-- Link boxicon icon -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-        <title>My pham</title>
+        <title>Đăng nhập</title>
     </head>
     <body>
         <div id="main">
@@ -39,15 +39,15 @@
                 </div>
                 <!-- Begin: NAV -->
                 <div id="nav">
-                    <a class="nav-items" href="index.html">TRANG CHỦ</a>
-                    <a class="nav-items" href="#Band">BÁN CHẠY</a>
-                    <a class="nav-items" href="#Tour">DƯỠNG BODY</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG DA TAY</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG DA MẶT</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG THỬ</a>
+                    <a class="nav-items" href="./index.html">TRANG CHỦ</a>
+                    <a class="nav-items" href="./selling.html">BÁN CHẠY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG BODY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG DA TAY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG DA MẶT</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG THỬ</a>
                 </div>
                 <div id="nav-mobile">
-                    <a class="nav-items" href="index.html">TRANG CHỦ</a>
+                    <a class="nav-items" href="./index.html">TRANG CHỦ</a>
                     <i class="buttonIcon bx bx-menu"></i>
                     <div class="sub-menu">
                         <div><a class="nav-items" href="./selling.html">BÁN CHẠY</a></div>
@@ -62,31 +62,21 @@
 
             <!--Content-->
             <div id="content">
-                <span class="title">Giỏ hàng/Thanh toán</span>
-
-                <div class="info">
-                    <div class="form">
-                        <span>Thông tin giao hàng</span><br />
-                        <input class="input-form" type="text" placeholder="Email" /><br />
-                        <input class="input-form" type="text" placeholder="Họ tên" /><br />
-                        <input class="input-form" type="text" placeholder="Số điện thoại" /><br />
-                        <input class="input-form" type="text" placeholder="Địa chỉ" /><br />
-                        <input class="input-form" type="text" placeholder="Ghi chú" /><br />
-                    </div>
-                    <div class="deal">
-                        <span>Thanh toán</span>
-                        <div class="deal-check">
-                            <div class="select">
-                                <input type="checkbox" name="Thanh toán khi giao hàng" id="" />
-                                <p>Thanh toán khi giao hàng</p>
-                            </div>
-                            <div class="select">
-                                <input type="checkbox" name="Thanh toán khi giao hàng" id="" />
-                                <p>Thanh toán bằng chuyển khoản</p>
-                            </div>
-                        </div>
-                        <button class="buy">Đặt hàng</button>
-                    </div>
+                <span class="title">Trang chủ/Đăng kí</span>
+                <div class="signUp">
+                    <form action="" class="formUp">
+                        <span>Đăng kí tài khoản</span>
+                        <label for="email1">Email:</label><br />
+                        <input type="text" id="email1" name="email1" placeholder="Email" required /><br />
+                        <label for="name1">Họ tên:</label><br />
+                        <input type="text" id="name1" name="name1" placeholder="Họ tên" required /><br />
+                        <label for="pass1">Mật khẩu:</label><br />
+                        <input type="password1" id="pass1" name="pass1" placeholder="Mật khẩu" required /><br />
+                        <label for="phone">Số điện thoại:</label><br />
+                        <input type="text" id="phone" name="phone" placeholder="Số điện thoại" required /><br />
+                        <button type="submit">Đăng kí</button>
+                        <a href="./dangnhap.html" class="signinBtn">Đăng nhập?</a>
+                    </form>
                 </div>
             </div>
 
@@ -155,25 +145,15 @@
         subMenu.classList.toggle("active");
     });
 
-    /* Xử lí điền thông tin */
-    let inputs = document.querySelectorAll(".input-form"); // Lấy các thẻ input cần điền
-    let btnBuy = document.querySelector(".buy"); // Lấy nút button Đặt hàng
-    btnBuy.addEventListener("click", () => {
-        // Thêm hành động click cho nút btn khi click thì hàm sau dấu , sẽ chạy
-        var check = 1; // cho biến ktra = 1
-        for (var i = 0; i < inputs.length; i++) {
-            //lặp hết các input nếu input nào trống sẽ dừng vòng lặp và cho check  = 0
-            if (inputs[i].value == "") {
-                check = 0;
-                break;
-            }
-        }
-        if (check == 0) {
-            alert("Chưa điền đầy đủ thông tin");
-        } else {
-            alert("Mua hàng thành công");
+    /* Xu li sign up */
+    function DangNhap() {
+        var txtEmail = document.querySelector("#email");
+        var txtPass = document.querySelector("#pass");
+        if (txtEmail.value == "Admin" && txtPass.value == "Admin123#") {
+            alert("Đăng nhập thành công!");
             window.location = "./index.html";
-            console.log("chuyen trang di");
+        } else {
+            alert("Bạn nhập sai email hoặc password!");
         }
-    });
+    }
 </script>

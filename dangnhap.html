@@ -63,27 +63,16 @@
             <!--Content-->
             <div id="content">
                 <span class="title">Trang chủ/Đăng nhập</span>
-                <div class="signUp">
+                <div class="signIn">
                     <div class="formIn">
                         <span>Đăng nhập tài khoản</span>
-                        <label for="email">Email:</label><br />
+                        <label for="email">Username:</label><br />
                         <input type="text" id="email" name="email" placeholder="Email" required /><br />
-                        <label for="pass">Mật khẩu:</label><br />
+                        <label for="pass">Password:</label><br />
                         <input type="password" id="pass" name="pass" placeholder="Mật khẩu" required /><br />
                         <button type="submit" onclick="DangNhap()">Đăng nhập</button>
+                        <a href="./dangki.html" class="signupBtn">Đăng kí?</a>
                     </div>
-                    <form action="" class="formUp">
-                        <span>Đăng kí tài khoản</span>
-                        <label for="email1">Email:</label><br />
-                        <input type="text" id="email1" name="email1" placeholder="Email" required /><br />
-                        <label for="name1">Họ tên:</label><br />
-                        <input type="text" id="name1" name="name1" placeholder="Họ tên" required /><br />
-                        <label for="pass1">Mật khẩu:</label><br />
-                        <input type="password1" id="pass1" name="pass1" placeholder="Mật khẩu" required /><br />
-                        <label for="phone">Số điện thoại:</label><br />
-                        <input type="number" id="phone" name="phone" placeholder="Số điện thoại" required /><br />
-                        <button type="submit">Đăng kí</button>
-                    </form>
                 </div>
             </div>
 
@@ -163,4 +152,18 @@
             alert("Bạn nhập sai email hoặc password!");
         }
     }
+
+    /* Xu li chuyen doi dang ki dang nhap */
+    let signupBtn = document.querySelector(".signupBtn"); // Lấy nút chuyển sang đăng nhập
+    let signinBtn = document.querySelector(".signinBtn"); // Lấy nút chuuyển sang đăng kí
+    let signIn = document.querySelector(".signIn"); // Lấy form đăng nhập
+    let signUp = document.querySelector(".signUp"); // Lấy form đăng kí
+    signinBtn.addEventListener("click", () => {
+        signIn.classList.toggle("hidden");
+        signUp.classList.toggle("hidden");
+    });
+    signupBtn.addEventListener("click", () => {
+        signIn.classList.toggle("hidden");
+        signUp.classList.toggle("hidden");
+    });
 </script>

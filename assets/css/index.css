@@ -4,10 +4,6 @@
      box-sizing: border-box;
 }
 
-html {
-     font-family: Arial, Helvetica, sans-serif;
-     scroll-behavior: smooth !important;
-}
 
 /* Header */
 .header-info{
@@ -89,7 +85,6 @@ html {
 }
 
 .container-home .home-img-hero {
-     height: 300px;
      overflow: hidden;
 }
 
@@ -250,7 +245,7 @@ html {
      }
 
      .list-product {
-               grid-template-columns: auto auto auto;
+          grid-template-columns: auto auto auto;
      }
 }   
 /* Mobile */
@@ -321,6 +316,19 @@ html {
      }
      .list-product{
           grid-template-columns: auto auto;
+     }
+
+     /*Footer */
+     #footer {
+          display: block;
+     }
+     
+     #footer .contact,
+     #footer .list,
+     #footer .about,
+     #footer .social {
+          width: 100%;
+          margin-top: 10px;
      }
 }
 

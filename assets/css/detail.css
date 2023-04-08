@@ -447,4 +447,16 @@
     .list-product{
         grid-template-columns: auto auto;
     }
+        /*Footer */
+        #footer {
+            display: block;
+        }
+    
+        #footer .contact,
+        #footer .list,
+        #footer .about,
+        #footer .social {
+            width: 100%;
+            margin-top: 10px;
+        }
 }

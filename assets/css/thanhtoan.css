@@ -94,7 +94,7 @@
 
 /* Content */
 #content {
-     padding: 30px 60px;
+     padding: 8px 60px 100px 60px;
 }
 
 .title{
@@ -202,13 +202,108 @@
 
 /* Ressponsiveeee */
 
+/* Tablet && Mobile */
+@media (max-width: 63.9375em) {
+     .detail-info .text {
+          display: none;
+     }
+
+     .box-detail {
+          display: block;
+     }
+}
 /* Tablet*/
 @media (min-width: 46.25em) and (max-width:63.9375em) {
+     #nav {
+          padding: 0 5px;
+     }
 
+     .logo img {
+          height: 50px;
+          width: 100px;
+     }
 }
 
 /* Mobile */
 @media (max-width: 46.1875em) {
+     .header-info {
+          padding: 6px 0 10px 0;
+     }
+     
+     .logo {
+          display: none;
+     }
+     
+     .search {
+          margin-left: 8px;
+     }
+     
+     .search input {
+          width: 200px;
+     }
+     
+     .detail-info {
+          margin-left: 24px;
+     }
+     
+     .detail-info i {
+          margin-top: 10px;
+     }
+     
+     .signup,
+     .shop {
+          display: flex;
+          cursor: pointer;
+          text-decoration: none;
+          color: #000;
+     }
+     
+          /* nav */
+     #nav {
+          display: none;
+     }
+     
+     .nav-items {
+          color: #fff;
+          padding: 4px 0;
+          text-decoration: none;
+     }
+     
+     .menu {
+          display: block;
+     }
+     
+     #nav-mobile {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 40px;
+     }
+     
+     #nav-mobile i {
+          cursor: pointer;
+          font-size: 30px;
+     }
+     
+     .sub-menu {
+          position: absolute;
+          display: none;
+          padding: 20px;
+          border-radius: 6px;
+          background: #685e5e;
+          right: 40px;
+          top: 40px;
+     }
+     
+     .sub-menu.active {
+          display: block;
+     }
+     
+     .sub-menu div {
+          margin-bottom: 8px;
+     }
+
      .form {
           width: 100%;
           margin-bottom: 12px;
@@ -224,5 +319,17 @@
      .buy{
           margin-bottom: 20px;
           float: none;
+     }
+     /*Footer */
+     #footer {
+          display: block;
+     }
+     
+     #footer .contact,
+     #footer .list,
+     #footer .about,
+     #footer .social {
+          width: 100%;
+          margin-top: 10px;
      }
 }

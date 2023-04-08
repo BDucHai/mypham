@@ -394,4 +394,28 @@
     .selling-left{
         display: none;
     }
+    .container-selling .btn-see-more{
+        margin-bottom: 14px;
+    }
+    /*Footer */
+     #footer{
+          display: block;
+     }
+     #footer .contact,#footer .list, #footer .about,#footer .social {
+          width: 100%;
+          margin-top: 10px;
+     }
+
+    /*Footer */
+    #footer {
+        display: block;
+    }
+    
+    #footer .contact,
+    #footer .list,
+    #footer .about,
+    #footer .social {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
