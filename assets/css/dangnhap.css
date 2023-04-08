@@ -113,13 +113,13 @@
      justify-content: center;
      align-items: center;
 }
-.signIn span{
+.signIn span, .signUp span{
      display: block ;
      font-size: 26px;
      font-weight: 500;
      margin-bottom: 20px;
 }
-.signIn label{
+.signIn label, .signUp label{
      font-size: 20px;
 }
 .signupBtn, .signinBtn{
