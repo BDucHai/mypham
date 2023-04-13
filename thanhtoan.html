@@ -28,7 +28,7 @@
                     <div class="detail-info">
                         <a href="./dangnhap.html" class="signup">
                             <i class="bx bx-user-circle"></i>
-                            <div class="text">Đăng xuất</div>
+                            <div class="text">Đăng nhập</div>
                         </a>
                         <a href="./giohang.html" class="shop">
                             <i class="bx bxs-shopping-bag"></i>
@@ -43,12 +43,12 @@
                 </div>
                 <!-- Begin: NAV -->
                 <div id="nav">
-                    <a class="nav-items" href="index.html">TRANG CHỦ</a>
-                    <a class="nav-items" href="#Band">BÁN CHẠY</a>
-                    <a class="nav-items" href="#Tour">DƯỠNG BODY</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG DA TAY</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG DA MẶT</a>
-                    <a class="nav-items" href="#Contact">DƯỠNG THỬ</a>
+                    <a class="nav-items" href="./index.html">TRANG CHỦ</a>
+                    <a class="nav-items" href="./selling.html">BÁN CHẠY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG BODY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG DA TAY</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG DA MẶT</a>
+                    <a class="nav-items" href="./selling.html">DƯỠNG THỬ</a>
                 </div>
                 <div id="nav-mobile">
                     <a class="nav-items" href="index.html">TRANG CHỦ</a>
@@ -184,6 +184,7 @@
     /*Hien thi dang nhap */
     let signupBtn = document.querySelector(".signup");
     let logoutBtn = document.querySelector(".logout");
+    let shopBtn = document.querySelector(".shop");
     if (sessionStorage.getItem("log") == "true") {
         signupBtn.classList.add("hidden");
         logoutBtn.classList.remove("hidden");

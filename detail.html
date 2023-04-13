@@ -27,9 +27,9 @@
                     <div class="detail-info">
                         <a href="./dangnhap.html" class="signup">
                             <i class="bx bx-user-circle"></i>
-                            <div class="text">Đăng xuất</div>
+                            <div class="text">Đăng nhập</div>
                         </a>
-                        <a href="./giohang.html" class="shop">
+                        <a href="./giohang.html" class="shop hidden">
                             <i class="bx bxs-shopping-bag"></i>
                             <div class="text">Giỏ hàng</div>
                             <div class="shop-nofi">1</div>
@@ -83,7 +83,7 @@
                     <div class="action">
                         <div class="quanlity"><div class="reduce">-</div> 1 <div>+</div></div>
                         <div style="display: flex; gap: 8px"><div class="buy">Mua hàng</div>
-                        <button class="add-to-cart">Thêm vào giỏ hàng</button></div>
+                        <a href="./giohang.html"><button class="add-to-cart">Thêm vào giỏ hàng</button></a></div>
                     </div>
                 </div>
             </div>
@@ -205,11 +205,14 @@
     /*Hien thi dang nhap */
     let signupBtn = document.querySelector(".signup");
     let logoutBtn = document.querySelector(".logout");
+    let shopBtn = document.querySelector(".shop");
     if (sessionStorage.getItem("log") == "true") {
         signupBtn.classList.add("hidden");
         logoutBtn.classList.remove("hidden");
+        shopBtn.classList.remove("hidden");
     } else {
         logoutBtn.classList.add("hidden");
+        shopBtn.classList.add("hidden");
         signupBtn.classList.remove("hidden");
     }
 
