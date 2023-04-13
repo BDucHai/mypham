@@ -8,7 +8,7 @@
         <!-- Link boxicon icon -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-        <title>Đăng nhập</title>
+        <title>Đăng kí</title>
     </head>
     <body>
         <div id="main">
@@ -71,10 +71,10 @@
                         <label for="name1">Họ tên:</label><br />
                         <input type="text" id="name1" name="name1" placeholder="Họ tên" required /><br />
                         <label for="pass1">Mật khẩu:</label><br />
-                        <input type="password1" id="pass1" name="pass1" placeholder="Mật khẩu" required /><br />
+                        <input type="password" id="pass1" name="pass1" placeholder="Mật khẩu" required /><br />
                         <label for="phone">Số điện thoại:</label><br />
                         <input type="text" id="phone" name="phone" placeholder="Số điện thoại" required /><br />
-                        <button type="submit">Đăng kí</button>
+                        <button type="submit" onclick="DangNhap()">Đăng kí</button>
                         <a href="./dangnhap.html" class="signinBtn">Đăng nhập?</a>
                     </form>
                 </div>
@@ -147,15 +147,15 @@
 
     /* Xu li sign up */
     function DangNhap() {
-        var txtEmail = document.querySelector("#email");
-        var txtPass = document.querySelector("#pass");
+        var txtEmail = document.querySelector("#email1");
+        var txtPass = document.querySelector("#pass1");
+        console.log(txtEmail);
         if (txtEmail.value != "Admin" && txtPass.value != "Admin123#") {
             alert("Đăng kí thành công!");
-            sessionStorage.setItem('log', 'true')
+            sessionStorage.setItem("log", "true");
             window.location = "./index.html";
         } else {
             alert("Tài khoản đã tồn tại!");
         }
     }
-
 </script>
