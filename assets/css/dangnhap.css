@@ -205,7 +205,9 @@
      cursor: pointer;
 }
 
-
+.hidden{
+     display: none;
+}
 
 /* BREAK POINT*/
 
@@ -312,13 +314,6 @@
                margin-bottom: 8px;
           }
      
-          .signup,
-          .shop {
-               display: flex;
-               cursor: pointer;
-               text-decoration: none;
-               color: #000;
-          }
      
           /* nav */
           #nav {

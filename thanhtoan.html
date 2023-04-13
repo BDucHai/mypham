@@ -28,13 +28,17 @@
                     <div class="detail-info">
                         <a href="./dangnhap.html" class="signup">
                             <i class="bx bx-user-circle"></i>
-                            <div class="text">Đăng nhập</div>
+                            <div class="text">Đăng xuất</div>
                         </a>
                         <a href="./giohang.html" class="shop">
                             <i class="bx bxs-shopping-bag"></i>
                             <div class="text">Giỏ hàng</div>
                             <div class="shop-nofi">1</div>
                         </a>
+                        <div class="logout hidden">
+                            <div class="text">Xin chào Lanh</div>
+                            <i class="bx bx-log-out"></i>
+                        </div>
                     </div>
                 </div>
                 <!-- Begin: NAV -->
@@ -175,5 +179,22 @@
             window.location = "./index.html";
             console.log("chuyen trang di");
         }
+    });
+
+    /*Hien thi dang nhap */
+    let signupBtn = document.querySelector(".signup");
+    let logoutBtn = document.querySelector(".logout");
+    if (sessionStorage.getItem("log") == "true") {
+        signupBtn.classList.add("hidden");
+        logoutBtn.classList.remove("hidden");
+    } else {
+        logoutBtn.classList.add("hidden");
+        signupBtn.classList.remove("hidden");
+    }
+
+    /*Dagn xuat */
+    logoutBtn.addEventListener("click", () => {
+        sessionStorage.clear();
+        window.location = "./dangnhap.html";
     });
 </script>

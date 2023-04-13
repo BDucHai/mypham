@@ -149,11 +149,13 @@
     function DangNhap() {
         var txtEmail = document.querySelector("#email");
         var txtPass = document.querySelector("#pass");
-        if (txtEmail.value == "Admin" && txtPass.value == "Admin123#") {
-            alert("Đăng nhập thành công!");
+        if (txtEmail.value != "Admin" && txtPass.value != "Admin123#") {
+            alert("Đăng kí thành công!");
+            sessionStorage.setItem('log', 'true')
             window.location = "./index.html";
         } else {
-            alert("Bạn nhập sai email hoặc password!");
+            alert("Tài khoản đã tồn tại!");
         }
     }
+
 </script>

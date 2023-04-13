@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
 /* Header */
 .header-info {
     display: flex;
@@ -46,7 +48,7 @@
 }
 
 .signup,
-.shop {
+.shop,.logout {
     display: flex;
     margin-right: 40px;
     cursor: pointer;
@@ -281,6 +283,11 @@
     color: #0a185e;
     cursor: pointer;
 }
+
+
+.hidden{
+    display: none;
+}
 /* PC */
 @media (min-width: 64em) {}
 
@@ -330,13 +337,6 @@
         margin-top: 10px;
     }
 
-    .signup,
-    .shop {
-        display: flex;
-        cursor: pointer;
-        text-decoration: none;
-        color: #000;
-    }
 
     /* nav */
     #nav {

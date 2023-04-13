@@ -46,7 +46,7 @@
 }
 
 .signup,
-.shop {
+.shop,.logout {
      display: flex;
      margin-right: 40px;
      cursor: pointer;
@@ -200,6 +200,9 @@
      cursor: pointer;
 }
 
+.hidden{
+     display: none;
+}
 /* Ressponsiveeee */
 
 /* Tablet && Mobile */
@@ -247,13 +250,6 @@
           margin-top: 10px;
      }
      
-     .signup,
-     .shop {
-          display: flex;
-          cursor: pointer;
-          text-decoration: none;
-          color: #000;
-     }
      
           /* nav */
      #nav {
